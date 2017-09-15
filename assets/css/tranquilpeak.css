@@ -679,6 +679,23 @@ blockquote {
           color: white; }
     #sidebar ul.sidebar-buttons:first-child {
       margin-top: 5px; }
+  #sidebar ul.author_links {
+    padding: 0;
+    display: inline;
+    margin: 0 0 20px 0; }
+    #sidebar ul.author_links li.sidebar-button {
+      width: 45px;
+      height: 45px;
+      display: inline-block; }
+      #sidebar ul.author_links li.sidebar-button .sidebar-button-link {
+        color: #ebebeb;
+        display: inline-block;
+        height: 100%; }
+        #sidebar ul.author_links li.sidebar-button .sidebar-button-link:hover, #sidebar ul.author_links li.sidebar-button .sidebar-button-link:active {
+          text-decoration: none;
+          color: white; }
+    #sidebar ul.author_links:first-child {
+      margin-top: 5px; }
 
 @media only screen and (max-width: 767px) {
   #sidebar[data-behavior="1"], #sidebar[data-behavior="2"], #sidebar[data-behavior="4"], #sidebar[data-behavior="5"] {
