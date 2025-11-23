@@ -1,396 +1,250 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Fincodr :: Code">
-    <title>Fincodr :: Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fincodr - Game Developer, Software Developer, Tech Enthusiast">
     <meta name="author" content="Fincodr">
+    <meta name="keywords" content="Fincodr, Game Developer, Software Developer, Programming, Tech">
     
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fincodr :: Code">
+    <meta property="og:url" content="https://fincodr.com/">
+    <meta property="og:site_name" content="Fincodr :: Code">
+    <meta property="og:description" content="Game Developer, Software Developer, Tech Enthusiast">
+    <meta property="og:image" content="https://fincodr.com/assets/images/mika_pixel_2017_200x200.png">
     
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fincodr :: Code">
+    <meta name="twitter:description" content="Game Developer, Software Developer, Tech Enthusiast">
+    <meta name="twitter:creator" content="@Fincodr">
+    <meta name="twitter:image" content="https://fincodr.com/assets/images/mika_pixel_2017_200x200.png">
     
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    <title>Fincodr :: Code</title>
     
-    <meta name="description" content="Thoughts, ramblings and occasionally cool things">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="Fincodr :: Code">
-<meta property="og:url" content="https://fincodr.com/index.html">
-<meta property="og:site_name" content="Fincodr :: Code">
-<meta property="og:description" content="Thoughts, ramblings and occasionally cool things">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fincodr :: Code">
-<meta name="twitter:description" content="Thoughts, ramblings and occasionally cool things">
-<meta name="twitter:creator" content="@Fincodr">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
     
-    
-        
-    
-    
-        <meta property="og:image" content="https://fincodr.com/assets/images/mika_pixel_2017_200x200.png"/>
-    
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
-    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
-    <!--STYLES END-->
-    
-    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/mika_pixel_2017_200x200.png">
 </head>
-
-    <body>
-        <div id="blog">
-            <!-- Define author's picture -->
-
-
+<body>
+    <!-- Starfield Background (80's Asteroid Style) -->
+    <!-- Inspired by the classic demo and game programming scene of the 80s/90s -->
+    <!-- Tribute to "Piranha" (DOS, 1996) and the golden age of game development -->
+    <canvas id="starfield"></canvas>
     
-        
-            
-        
-    
-
-<header id="header" data-behavior="2">
-    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-    <div class="header-title">
-        <a class="header-title-link" href="/ ">Fincodr :: Code</a>
-    </div>
-    
-        
-            <a  class="header-right-picture "
-                href="#about">
-        
-        
-            <img class="header-picture" src="/assets/images/mika_pixel_2017_200x200.png" alt="Author&#39;s picture"/>
-        
-        </a>
-    
-</header>
-
-            <!-- Define author's picture -->
-
-
-
-        
-    
-
-<nav id="sidebar" data-behavior="2">
-    <div class="sidebar-container">
-        
-            <div class="sidebar-profile">
-                <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/mika_pixel_2017_200x200.png" alt="Author&#39;s picture"/>
-                </a>
-                <h4 class="sidebar-profile-name">Fincodr</h4>
-                
-                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
-</h5>
-                
+    <!-- Terminal Container -->
+    <div class="terminal-container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button terminal-button-close"></span>
+                <span class="terminal-button terminal-button-minimize"></span>
+                <span class="terminal-button terminal-button-maximize"></span>
             </div>
+            <div class="terminal-title">fincodr@terminal:~</div>
+        </div>
         
-        
-            <ul class="sidebar-buttons author_links">
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://github.com/Fincodr" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
-                        <span class="sidebar-button-desc"></span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://twitter.com/Fincodr" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
-                        <span class="sidebar-button-desc"></span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://www.linkedin.com/in/mikaluoma-aho/" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
-                        <span class="sidebar-button-desc"></span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/atom.xml"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-                        <span class="sidebar-button-desc"></span>
-                    </a>
-            </li>
-            
-        </ul>
-        
-            <ul class="sidebar-buttons menu">
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/ "
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                        <span class="sidebar-button-desc">Home</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                        <span class="sidebar-button-desc">Categories</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                        <span class="sidebar-button-desc">Tags</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-archives"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                        <span class="sidebar-button-desc">Archives</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link open-algolia-search"
-                             href="#search"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
-                        <span class="sidebar-button-desc">Search</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="#about"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-                        <span class="sidebar-button-desc">About</span>
-                    </a>
-            </li>
-            
-        </ul>
-        
-    </div>
-</nav>
-
-            
-            <div id="main" data-behavior="2"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                <section class="postShorten-group main-content-wrap">
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2017/09/15/hello-world/">
-                            Hello World
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-09-15T09:57:41+03:00">
-	
-		    Sep 15, 2017
-    	
-    </time>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2017/09/15/hello-world/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
+        <!-- Terminal Body -->
+        <div class="terminal-body">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="terminal-prompt">
+                    <span class="prompt-user">guest@fincodr</span>
+                    <span class="prompt-separator">:</span>
+                    <span class="prompt-path">~</span>
+                    <span class="prompt-symbol">$</span>
+                    <span class="prompt-command">whoami</span>
                 </div>
-            
-        </div>
-        
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
-        
-        
-        <li class="pagination-number">page 1 of 1</li>
-    </ul>
-</div>
-
-</section>
-
-
-                <footer id="footer" class="main-content-wrap">
-    <span class="copyrights">
-        Copyrights &copy; 2017 Fincodr. All Rights Reserved.
-    </span>
-</footer>
-
-            </div>
-            
-        </div>
-        
-
-
-    
-        
-    
-
-<div id="about">
-    <div id="about-card">
-        <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
-        </div>
-        
-            <img id="about-card-picture" src="/assets/images/mika_pixel_2017_200x200.png" alt="Author&#39;s picture"/>
-        
-            <h4 id="about-card-name">Fincodr</h4>
-        
-            <div id="about-card-bio"><p>author.bio</p>
-</div>
-        
-        
-            <div id="about-card-job">
-                <i class="fa fa-briefcase"></i>
-                <br/>
-                <p>author.job</p>
-
-            </div>
-        
-        
-            <div id="about-card-location">
-                <i class="fa fa-map-marker"></i>
-                <br/>
-                Jyväskylä
-            </div>
-        
-    </div>
-</div>
-
-        <div id="algolia-search-modal" class="modal-container">
-    <div class="modal">
-        <div class="modal-header">
-            <span class="close-button"><i class="fa fa-close"></i></span>
-            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-                <span class="searchby-algolia-text text-color-light text-small">by</span>
-                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-            </a>
-            <i class="search-icon fa fa-search"></i>
-            <form id="algolia-search-form">
-                <input type="text" id="algolia-search-input" name="search"
-                    class="form-control input--large search-input" placeholder="Search "
-                    />
-            </form>
-        </div>
-        <div class="modal-body">
-            <div class="no-result text-color-light text-center">no post found</div>
-            <div class="results">
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="https://fincodr.com/2017/09/15/hello-world/">
-                            <h3 class="media-heading">Hello World</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Sep 15, 2017
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
+                <div class="profile-section">
+                    <div class="profile-image-container">
+                        <img src="/assets/images/mika_pixel_2017_200x200.png" alt="Fincodr Profile" class="profile-image">
                     </div>
-                    <div style="clear:both;"></div>
-                    <hr>
+                    <div class="profile-info">
+                        <h1 class="name">
+                            <span class="bracket">[</span>
+                            <span class="text">Fincodr</span>
+                            <span class="bracket">]</span>
+                        </h1>
+                        <div class="tagline-container">
+                            <span class="prompt-symbol-inline">&gt;</span>
+                            <span class="tagline-wrapper"><span class="tagline" id="typed-text"></span><span class="cursor">█</span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Info Section -->
+            <section class="info-section">
+                <div class="terminal-prompt">
+                    <span class="prompt-user">guest@fincodr</span>
+                    <span class="prompt-separator">:</span>
+                    <span class="prompt-path">~</span>
+                    <span class="prompt-symbol">$</span>
+                    <span class="prompt-command">cat info.txt</span>
                 </div>
                 
-            </div>
-        </div>
-        <div class="modal-footer">
-            <p class="results-count text-medium"
-                data-message-zero="no post found"
-                data-message-one="1 post found"
-                data-message-other="{n} posts found">
-                1 post found
-            </p>
+                <div class="info-content">
+                    <div class="info-line">
+                        <span class="info-label">Location:</span>
+                        <span class="info-value">Jyväskylä, Finland</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value">Available for collaboration</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CV Section -->
+            <section class="cv-section">
+                <div class="terminal-prompt">
+                    <span class="prompt-user">guest@fincodr</span>
+                    <span class="prompt-separator">:</span>
+                    <span class="prompt-path">~</span>
+                    <span class="prompt-symbol">$</span>
+                    <span class="prompt-command">cat cv.txt</span>
+                </div>
+                
+                <div class="cv-content">
+                    <div class="cv-category">
+                        <div class="cv-header">
+                            <span class="cv-icon">👨‍💻</span>
+                            <span class="cv-title">About</span>
+                        </div>
+                        <div class="cv-items">
+                            <div class="cv-item">
+                                <span class="cv-item-detail">20+ years in software development & ICT • Started programming at age 7 • Master's in Cyber Security, Bachelor's in Computer Science • From the 80s/90s demo and game programming scene</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-category">
+                        <div class="cv-header">
+                            <span class="cv-icon">💼</span>
+                            <span class="cv-title">Experience</span>
+                        </div>
+                        <div class="cv-items">
+                            <div class="cv-item">
+                                <span class="cv-item-title">Indie Game Developer @ MXL</span>
+                                <span class="cv-item-detail">1996 - Present (29+ years) • Lead Game Programmer • Created "Piranha" for DOS (1996)</span>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-item-title">Software Architect @ Vincit</span>
+                                <span class="cv-item-detail">2015 - Present (10+ years) • Cyber Security & Software Architecture • Insurance sector digital services</span>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-item-title">Software Developer @ Curious Fox Oy</span>
+                                <span class="cv-item-detail">2023 - Present • Freelance • Full-stack development</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-category">
+                        <div class="cv-header">
+                            <span class="cv-icon">🛠️</span>
+                            <span class="cv-title">Technical Skills</span>
+                        </div>
+                        <div class="cv-items">
+                            <div class="cv-item">
+                                <span class="cv-item-title">Languages</span>
+                                <span class="cv-item-detail">C++, Assembler (x86), Java, TypeScript/ES6, JavaScript, Node, PHP</span>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-item-title">Frontend</span>
+                                <span class="cv-item-detail">React, Vue, Angular, TypeScript, Bootstrap, SVG</span>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-item-title">Backend & DevOps</span>
+                                <span class="cv-item-detail">Java Spring, Flyway, Docker, Kubernetes, Ansible, AWS, CI/CD</span>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-item-title">Game Development</span>
+                                <span class="cv-item-detail">C++, OpenGL, Vulkan, Game Engine Development</span>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-item-title">Cyber Security</span>
+                                <span class="cv-item-detail">ISO/IEC 27000, Katakri, Patakri, Vahti</span>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-item-title">Architecture</span>
+                                <span class="cv-item-detail">System Architecture, Enterprise Architecture (TOGAF), SOA</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-category">
+                        <div class="cv-header">
+                            <span class="cv-icon">🎮</span>
+                            <span class="cv-title">Projects & Interests</span>
+                        </div>
+                        <div class="cv-items">
+                            <div class="cv-item">
+                                <span class="cv-item-detail">Game engines (C++/OpenGL/Vulkan) • Cybersecurity challenges • Demo scene programming • UI/UX design with artistic perspective</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Social Links Section -->
+            <section class="social-section">
+                <div class="terminal-prompt">
+                    <span class="prompt-user">guest@fincodr</span>
+                    <span class="prompt-separator">:</span>
+                    <span class="prompt-path">~</span>
+                    <span class="prompt-symbol">$</span>
+                    <span class="prompt-command">ls -la ./social/</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Fincodr" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <span class="link-prefix">├──</span>
+                        <span class="link-icon">📁</span>
+                        <span class="link-text">github</span>
+                        <span class="link-arrow">→</span>
+                        <span class="link-url">github.com/Fincodr</span>
+                    </a>
+                    
+                    <a href="https://twitter.com/Fincodr" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <span class="link-prefix">├──</span>
+                        <span class="link-icon">🐦</span>
+                        <span class="link-text">twitter</span>
+                        <span class="link-arrow">→</span>
+                        <span class="link-url">twitter.com/Fincodr</span>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/mikaluoma-aho/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <span class="link-prefix">└──</span>
+                        <span class="link-icon">💼</span>
+                        <span class="link-text">linkedin</span>
+                        <span class="link-arrow">→</span>
+                        <span class="link-url">linkedin.com/in/mikaluoma-aho</span>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="terminal-footer">
+                <div class="terminal-prompt">
+                    <span class="prompt-user">guest@fincodr</span>
+                    <span class="prompt-separator">:</span>
+                    <span class="prompt-path">~</span>
+                    <span class="prompt-symbol">$</span>
+                    <span class="cursor-footer">_</span>
+                </div>
+                <div class="copyright">
+                    © 2025 Fincodr. All rights reserved.
+                </div>
+            </footer>
         </div>
     </div>
-</div>
-
-        
-<div id="cover" style="background-image:url('/assets/images/null');"></div>
-        <!--SCRIPTS-->
-<script src="/assets/js/jquery.js"></script>
-<script src="/assets/js/jquery.fancybox.js"></script>
-<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
-<script src="/assets/js/tranquilpeak.js"></script>
-<!--SCRIPTS END-->
-
-
-    </body>
+    
+    <!-- Scripts -->
+    <script src="/assets/js/custom.js"></script>
+</body>
 </html>
